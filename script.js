@@ -70,6 +70,6 @@ function showOutput(inputWord) {
   para.textContent = `${inputWord}-${word.word},`;
   outputDiv.appendChild(para);
   para.classList.add('word-style')
-  word.word += ""
+  word.word = ""
 }
 
