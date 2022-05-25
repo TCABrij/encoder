@@ -73,26 +73,22 @@ button:hover {
 }
 
 .word-style {
-    font: 18px arial;
-    font-weight: 600;
-    color: green;
+    font: 16px arial;
+    font-weight: 300;
+    color: white;
+    background: dodgerblue;
+    border: 1px solid;
+    margin-bottom: 2px;
+    padding: 5px;
+    letter-spacing: 2px;
 }
-
-.fade-out{
-    transition: all 1s;
-    color: red;
-    height: 0px;
-    background-color: black;
-}
-
 
 
 /* copy and Clear Buttons */
 .internal-buttons {
     visibility: hidden;
     position: absolute;
-    right: 2px;
-    top: 2px;
+    bottom: 0%;
 }
 
 .copy-btn {

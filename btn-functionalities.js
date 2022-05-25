@@ -11,7 +11,7 @@ howItWorksBtn.addEventListener('click', showHowItWorks)
 function textPresent(){
     const internalButtons = document.querySelector('.internal-buttons')
     internalButtons.classList.add('text-present')
-    document.querySelector('.copy-btn').textContent = 'Copy'
+    document.querySelector('.copy-btn').textContent = 'Copy to Clipboard'
 
 }
 
@@ -19,13 +19,13 @@ function copyToClipboard(){
     let copiedCodes = ''
     const paras = document.querySelectorAll('.word-style')
     paras.forEach( para => {
-        copiedCodes += para.textContent
+        copiedCodes += `${para.textContent},`
     })
     // clipboard
     navigator.clipboard.writeText(copiedCodes)
 
-    // renaming text to copied
-    document.querySelector('.copy-btn').textContent = 'Copied'
+    // renaming button text
+    document.querySelector('.copy-btn').textContent = 'Copied 🎉'
 
 }
 

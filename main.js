@@ -2,9 +2,11 @@ const button = document.querySelector("button");
 const input = document.querySelector("#input");
 const outputDiv = document.querySelector(".output-div");
 
-const word = {
+const wordObj = {
   word: "",
 };
+
+var mnemonicsCode = []
 
 button.addEventListener("click", encode);
 
@@ -23,9 +25,11 @@ function encode() {
   // varification for each word
   fetchedWords.forEach((word) => {
     isLetter(word);
+    mnemonicsCode.push(`${word}-${wordObj.word}`)
+    wordObj.word = ''
   });
 
-  showOutput(inputValue);
+  showOutput()
 }
 
 // Getting all the words
@@ -54,44 +58,46 @@ function isLetter(inputValue) {
   for (let i = 0; i < inputValue.length; i++) {
     let letter = inputValue[i];
     if (letter == "t" || letter == "d") {
-      word.word += "1";
+      wordObj.word += "1";
     }
     if (letter == "n") {
-      word.word += "2";
+      wordObj.word += "2";
     }
     if (letter == "m") {
-      word.word += "3";
+      wordObj.word += "3";
     }
     if (letter == "r") {
-      word.word += "4";
+      wordObj.word += "4";
     }
     if (letter == "l") {
-      word.word += "5";
+      wordObj.word += "5";
     }
     if (letter == "g" || letter == "j") {
-      word.word += "6";
+      wordObj.word += "6";
     }
     if (letter == "k" || letter == "c") {
-      word.word += "7";
+      wordObj.word += "7";
     }
     if (letter == "v" || letter == "f") {
-      word.word += "8";
+      wordObj.word += "8";
     }
     if (letter == "p" || letter == "b") {
-      word.word += "9";
+      wordObj.word += "9";
     }
     if (letter == "z" || letter == "s") {
-      word.word += "0";
+      wordObj.word += "0";
     }
   }
 }
 
 // drop output
-function showOutput(inputWord) {
-  const para = document.createElement("p");
-  para.textContent = `${inputWord}-${word.word},`;
-  outputDiv.appendChild(para);
-  para.classList.add("word-style");
-  word.word = "";
+function showOutput() {
+  mnemonicsCode.forEach(code=>{
+    const para = document.createElement("p");
+    para.textContent = code
+    para.classList.add('word-style')
+    outputDiv.append(para)
+  })
+  mnemonicsCode = []
 }
 
