@@ -1,20 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     background: #646FD4;
     height: 90vh;
 }
 
-.centered{
+.centered {
     display: grid;
     place-content: center;
 }
 
-.title{
+.title {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     height: 10vh;
@@ -22,23 +22,26 @@
 }
 
 /* inputs */
-#input{
+#input {
     padding: 5px 10px;
     border: 2px solid white;
-    box-shadow: 
-       inset -2px -2px 5px rgba(0, 0, 0, 0.265),
-       inset 2px 2px 5px rgba(0, 0, 0, 0.265);
-       font-weight: 600;
+    box-shadow:
+        inset -2px -2px 5px rgba(0, 0, 0, 0.265),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.265);
+    font-weight: 600;
 }
-#input:focus{
+
+#input:focus {
     outline: 2px solid orange;
     border: none;
     color: rgba(0, 0, 0, 0.599);
 }
-#input::placeholder{
-    color:rgba(0, 0, 0, 0.214)
+
+#input::placeholder {
+    color: rgba(0, 0, 0, 0.214)
 }
-button{
+
+button {
     padding: 8px 10px;
     cursor: pointer;
     background: #FF5D5D;
@@ -47,7 +50,8 @@ button{
     color: white;
     font-weight: 500;
 }
-button:hover{
+
+button:hover {
     border-color: transparent;
     background: #f63a3a;
     color: white
@@ -56,17 +60,85 @@ button:hover{
 
 
 /* outputs */
-.output-div{
-    padding: 10px; 
-    height: 30vh;
+.output-div {
+    position: relative;
+    padding: 10px;
+    height: 40vh;
     margin-top: 20px;
     background-color: white;
-    box-shadow: 
-      inset -5px -5px 5px rgba(0, 0, 0, 0.214),
-      inset 5px 5px 5px rgba(0, 0, 0, 0.242);
+    box-shadow:
+        inset -5px -5px 5px rgba(0, 0, 0, 0.214),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.242);
+    overflow: scroll;
 }
-.word-style{
+
+.word-style {
     font: 18px arial;
     font-weight: 600;
     color: green;
+}
+
+.fade-out{
+    transition: all 1s;
+    color: red;
+    height: 0px;
+    background-color: black;
+}
+
+
+
+/* copy and Clear Buttons */
+.internal-buttons {
+    visibility: hidden;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+
+.copy-btn {
+    background-color: rgb(11, 182, 11);
+    text-shadow: 0px 0px 1px black;
+}
+
+.copy-btn:hover {
+    background-color: green;
+}
+.text-present{
+    visibility: visible;
+}
+
+/* Download and How it works buttons */
+.download-btn {
+    background-color: #313552;
+}
+.download-btn:hover{
+    background-color: #232639;
+}
+
+.how-it-works {}
+
+
+
+/* Custom Scrollbars */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4b58c6;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #242F9B;
 }

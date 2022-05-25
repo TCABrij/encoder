@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mnemonics Encoder</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="ui-controls.js" defer></script>
+    <script src="btn-functionalities.js" defer></script>
 </head>
 <body>
     <h1 class="title centered">Mnemonics Encoder</h1>
     <main class="container centered">
        <div class="input-fields">
-           <input type="text" name="input" id="input" placeholder="Enter a word" autofocus>
+           <input type="text" name="input" id="input" placeholder="Words seperated by comma" autofocus>
            <button>Encode</button>
            <div class="output-div">
-
+               <div class="internal-buttons">
+                   <button class="copy-btn">Clipboard</button>
+                   <button class="clear-btn">Clear</button>
+               </div>
+           </div>
+           <div class="external-buttons">
+               <button class="download-btn"<i class="fa-solid fa-download"></i>Get the App</button>
+               <button class="how-it-works">How it works?</button>
            </div>
        </div>
     </main>
