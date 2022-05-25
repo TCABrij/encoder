@@ -108,6 +108,11 @@ button:hover {
 }
 
 /* Download and How it works buttons */
+.external-buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 .download-btn {
     background-color: #313552;
 }
@@ -115,7 +120,9 @@ button:hover {
     background-color: #232639;
 }
 
-.how-it-works {}
+.how-it-works {
+    background-color: #d18e06;
+}
 
 
 
