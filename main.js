@@ -3,10 +3,20 @@ const input = document.querySelector("#input");
 const outputDiv = document.querySelector(".output-div");
 
 const wordObj = {
+  code: '',
   word: "",
+  prefix: "",
+  mid: "6",
+  postfix: "",
+  clearObject() {
+    this.prefix = ""
+    this.postfix = ""
+    this.word = ""
+    this.code = ""
+  },
 };
 
-var mnemonicsCode = []
+var mnemonicsCode = [];
 
 button.addEventListener("click", encode);
 
@@ -20,16 +30,28 @@ function encode() {
   textPresent();
   let inputValue = input.value.toLowerCase();
   input.value = "";
-  const fetchedWords = wordFetcher(inputValue); // taking Raw string
+  const fetchedWords = wordFetcher(inputValue); // Returning Array of words
 
-  // varification for each word
+  // for each word
   fetchedWords.forEach((word) => {
-    isLetter(word);
-    mnemonicsCode.push(`${word}-${wordObj.word}`)
-    wordObj.word = ''
+
+  // if word contains sh and ch
+    if (word.includes("sh") || word.includes("ch")) {
+      findPrefixAndPostfix(word); // replacing ch and sh to 6
+      isLetter(wordObj.word); // replacing prefix and suffix with their codes
+      mnemonicsCode.push(`${word}-${wordObj.code}`); // pushing code to mnemonics[] array
+
+      //clearing object for new word
+      wordObj.clearObject();
+    } else {
+  // if not contains then do normal
+      isLetter(word); 
+      mnemonicsCode.push(`${word}-${wordObj.code}`);
+      wordObj.clearObject()
+    }
   });
 
-  showOutput()
+  showOutput();
 }
 
 // Getting all the words
@@ -54,50 +76,81 @@ function wordFetcher(string) {
 }
 
 // varifying for letter
-function isLetter(inputValue) {
-  for (let i = 0; i < inputValue.length; i++) {
-    let letter = inputValue[i];
+function isLetter(word) {
+  for (let i = 0; i < word.length; i++) {
+    let letter = word[i];
     if (letter == "t" || letter == "d") {
-      wordObj.word += "1";
+      wordObj.code += "1";
     }
     if (letter == "n") {
-      wordObj.word += "2";
+      wordObj.code += "2";
     }
     if (letter == "m") {
-      wordObj.word += "3";
+      wordObj.code += "3";
     }
     if (letter == "r") {
-      wordObj.word += "4";
+      wordObj.code += "4";
     }
     if (letter == "l") {
-      wordObj.word += "5";
+      wordObj.code += "5";
     }
     if (letter == "g" || letter == "j") {
-      wordObj.word += "6";
+      wordObj.code += "6";
+    }
+    if(letter == '6' ){
+      wordObj.code += '6'
     }
     if (letter == "k" || letter == "c") {
-      wordObj.word += "7";
+      wordObj.code += "7";
     }
     if (letter == "v" || letter == "f") {
-      wordObj.word += "8";
+      wordObj.code += "8";
     }
     if (letter == "p" || letter == "b") {
-      wordObj.word += "9";
+      wordObj.code += "9";
     }
     if (letter == "z" || letter == "s") {
-      wordObj.word += "0";
+      wordObj.code += "0";
     }
   }
 }
 
 // drop output
 function showOutput() {
-  mnemonicsCode.forEach(code=>{
+  mnemonicsCode.forEach((code) => {
     const para = document.createElement("p");
-    para.textContent = code
-    para.classList.add('word-style')
-    outputDiv.append(para)
-  })
-  mnemonicsCode = []
+    para.textContent = code;
+    para.classList.add("word-style");
+    outputDiv.append(para);
+  });
+  mnemonicsCode = [];
 }
 
+function findPrefixAndPostfix(string) {
+  if (string.includes("sh")) {
+    let index = string.indexOf("sh");
+
+    for (let i = 0; i < index; i++) {
+      wordObj.prefix += string[i];
+    }
+    for (let i = index + 2; i < string.length; i++) {
+      wordObj.postfix += string[i];
+    }
+
+    // prefix + 6 + postfix
+    wordObj.word = wordObj.prefix + '6' + wordObj.postfix
+  
+  } else {
+    let index = string.indexOf("ch");
+
+    for (let i = 0; i < index; i++) {
+      wordObj.prefix += string[i];
+    }
+    for (let i = index + 2; i < string.length; i++) {
+      wordObj.postfix += string[i];
+    }
+    // prefix + 6 + postfix
+    wordObj.word = wordObj.prefix + '6' + wordObj.postfix
+
+  }
+}
