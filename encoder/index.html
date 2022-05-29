@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=false, width=device-width, initial-scale=1.0">
+    <title>Mnemonics Encoder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="ui-controls.js" defer></script>
+    <script src="btn-functionalities.js" defer></script>
+    <script src="how-it-works.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+    <h1 class="title centered">Mnemonics Encoder</h1>
+    <main class="container centered">
+        <div class="input-fields">
+            <input type="text" name="input" id="input" placeholder="Words seperated by comma" autofocus>
+            <button>Encode</button>
+            <div class="output-div">
+                <div class="internal-buttons">
+                    <button class="copy-btn">Copy to Clipboard</button>
+                    <button class="clear-btn">Clear</button>
+                </div>
+            </div>
+            <div class="external-buttons">
+                <button class="how-it-works">How it works?</button>
+            </div>
+        </div>
+        <div class="modal-container modal-closed">
+            <div class="modal">
+               <div class="modal-close-btn">X</div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

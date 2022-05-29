@@ -1,190 +1,44 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: #646FD4;
+    font-family: 'poppins', sans-serif;
 }
-
-.container {
-    background: #646FD4;
-    height: 90vh;
+.title{
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    background-color: #F806CC;
 }
-
-.centered {
+.container{
+    height: 50vh;
+    margin-top: 5rem;
     display: grid;
     place-content: center;
 }
-
-.title {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    height: 10vh;
-    background-color: #242F9B;
-}
-
-/* inputs */
-#input {
-    padding: 5px 10px;
-    border: 2px solid white;
-    box-shadow:
-        inset -2px -2px 5px rgba(0, 0, 0, 0.265),
-        inset 2px 2px 5px rgba(0, 0, 0, 0.265);
-    font-weight: 600;
-}
-
-#input:focus {
-    outline: 2px solid orange;
-    border: none;
-    color: rgba(0, 0, 0, 0.599);
-}
-
-#input::placeholder {
-    color: rgba(0, 0, 0, 0.214)
-}
-
-button {
-    padding: 8px 10px;
-    cursor: pointer;
-    background: #FF5D5D;
+button{
     border: none;
     outline: none;
-    color: white;
-    font-weight: 500;
-}
-
-button:hover {
-    border-color: transparent;
-    background: #f63a3a;
-    color: white
-}
-
-
-
-/* outputs */
-.output-div {
-    position: relative;
-    padding: 10px;
-    height: 40vh;
-    margin-top: 20px;
-    background-color: white;
-    box-shadow:
-        inset -5px -5px 5px rgba(0, 0, 0, 0.214),
-        inset 5px 5px 5px rgba(0, 0, 0, 0.242);
-    overflow: scroll;
-}
-
-.word-style {
-    font: 16px arial;
-    font-weight: 300;
-    color: white;
-    background: dodgerblue;
-    border: 1px solid;
-    margin-bottom: 2px;
-    padding: 5px;
+    background-color: #F806CC;
+    font: 25px 'poppins', sans-serif;
+    padding: .8rem 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     letter-spacing: 2px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.334);
+}
+button:first-child{
+    margin-bottom: 10px;
 }
 
 
-/* copy and Clear Buttons */
-.internal-buttons {
-    visibility: hidden;
-    position: absolute;
-    bottom: 0%;
-}
-
-.copy-btn {
-    background-color: rgb(11, 182, 11);
-    text-shadow: 0px 0px 1px black;
-}
-
-.copy-btn:hover {
-    background-color: green;
-}
-.text-present{
-    visibility: visible;
-}
-
-/* Download and How it works buttons */
-.external-buttons{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.download-btn {
-    background-color: #313552;
-}
-.download-btn:hover{
-    background-color: #232639;
-}
-
-.how-it-works {
-    background-color: #d18e06;
-}
-
-
- /* How it works modal */
- .modal-container{
-     position: absolute;
-     height: 100vh;
-     width: 100vw;
-     display: grid;
-     place-content: center;
- }
- .modal{
-     position: relative;
-     height: 90vh;
-     width: 90vw;
-     background-color: white;
-     overflow-y: auto;
-     /* backdrop-filter: blur(15px); */
-     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.301);
- }
- .modal-close-btn{
-     position: absolute;
-     right: 0px;
-     top: 0px;
-     font: 25px arial;
-     cursor: pointer;
-     color: white;
-     padding: 2px 5px;
-     background-color: orange;
-     transition: all .5s;
- }
- .modal-close-btn:hover{
-
-     background-color: dodgerblue;
-     color: white;
-     
- }
-
- .modal-closed{
-     display: none;
- }
-
-
-
-/* Custom Scrollbars */
-
-
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #4b58c6;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #242F9B;
+a{
+    text-decoration: none;
+    color: white;
 }
