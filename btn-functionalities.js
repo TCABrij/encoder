@@ -5,7 +5,6 @@ const howItWorksBtn = document.querySelector('.how-it-works')
 
 copyBtn.addEventListener('click', copyToClipboard)
 clearBtn.addEventListener('click', clearDiv)
-downloadBtn.addEventListener('click', downloadApp)
 howItWorksBtn.addEventListener('click', showHowItWorks)
 
 function textPresent(){
@@ -35,10 +34,6 @@ function clearDiv(){
         para.remove()
         document.querySelector('.internal-buttons').classList.remove('text-present')
     })
-}
-
-function downloadApp(){
-    
 }
 
 function showHowItWorks(){

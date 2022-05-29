@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #646FD4;
+}
 
 .container {
     background: #646FD4;
@@ -119,6 +122,46 @@ button:hover {
 .how-it-works {
     background-color: #d18e06;
 }
+
+
+ /* How it works modal */
+ .modal-container{
+     position: absolute;
+     height: 100vh;
+     width: 100vw;
+     display: grid;
+     place-content: center;
+ }
+ .modal{
+     position: relative;
+     height: 90vh;
+     width: 90vw;
+     background-color: white;
+     overflow-y: auto;
+     /* backdrop-filter: blur(15px); */
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.301);
+ }
+ .modal-close-btn{
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     font: 25px arial;
+     cursor: pointer;
+     color: white;
+     padding: 2px 5px;
+     background-color: orange;
+     transition: all .5s;
+ }
+ .modal-close-btn:hover{
+
+     background-color: dodgerblue;
+     color: white;
+     
+ }
+
+ .modal-closed{
+     display: none;
+ }
 
 
 
