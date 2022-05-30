@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mnemonics Decoder</title>
+    <link rel="stylesheet" href="../encoder/style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +17,17 @@
     <header>
         <h1 class="title">Mnemonics Decoder</h1>
     </header>
-    <main class="container">
-        
+    <main class="container centered">
+        <div class="input-fields">
+            <input type="text" name="input" id="input" placeholder="Enter encoded code" autofocus>
+            <button>Decode</button>
+            <div class="output-div">
+                <div class="internal-buttons">
+                    <button class="copy-btn">Copy to Clipboard</button>
+                    <button class="clear-btn">Clear</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

@@ -1,18 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body{
-    font-family: 'poppins', sans-serif;
+    font-family: 'poppins'!important;
 }
+
+
 .title{
+    height: auto;
     text-align: center;
-    padding: 20px;
-    position: sticky;
-    top: 0px;
     font-weight: 600;
     font-size: 25px;
     color: white;
-    background-color: #F806CC;
+    background-color: #293462;
+    padding: 2rem;
+}
+.container{
+    height: 80vh;
 }
