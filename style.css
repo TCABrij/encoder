@@ -55,7 +55,7 @@ a{
     text-align: center;
 }
 a:hover{
-    background-color: #723df7;
+    background-color: #2a0d70;
 }
 
 .download-btn{
@@ -71,4 +71,7 @@ a:hover{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100vmax;
+}
+.download-btn:focus{
+    transform: translateX(-50%);
 }

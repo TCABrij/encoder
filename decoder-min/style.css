@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+:root{
+    --title-nova: 'Nova Square', cursive;
+    --title--gold: 'Goldman', cursive;
+}
 body{
-    font-family: 'poppins'!important;
+    font-family: var(--title--gold);
 }
 
 
@@ -8,6 +15,7 @@ body{
     text-align: center;
     font-weight: 600;
     font-size: 25px;
+    font-family: var(--title-font);
     color: white;
     background-color: #293462;
     padding: 2rem;
