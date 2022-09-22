@@ -14,7 +14,7 @@ body{
     font-weight: 600;
     font-size: 25px;
     color: white;
-    background-color: #F806CC;
+    background-color: #1C6758;
 }
 .container{
     height: 50vh;
@@ -31,7 +31,7 @@ body{
     border: none;
     outline: none;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.334);
-    background-color: #F806CC;
+    background-color: #16213E;
     font: 25px 'poppins', sans-serif;
     padding: .8rem 2rem;
     border-top-left-radius: 20px;
@@ -54,12 +54,17 @@ a{
     text-align: center;
 }
 a:hover{
-    background-color: #c50ca3;
+    background-color: #723df7;
 }
 
 .download-btn{
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.806);
     cursor: pointer;
+    font-size: .5rem;
+    padding: 5px;
+    border-radius: 0;
 }
