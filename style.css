@@ -25,6 +25,7 @@ body{
 .box{
     height: auto;
     width: auto;
+    position: relative;
 }
 
 .btn{
@@ -58,13 +59,16 @@ a:hover{
 }
 
 .download-btn{
-    position: absolute;
-    bottom: 0;
-    left: 5px;
     color: white;
     background-color: rgba(0, 0, 0, 0.806);
     cursor: pointer;
-    font-size: .5rem;
-    padding: 5px;
+    font-size: .8rem;
+    padding: 5px 10px;
     border-radius: 0;
+    margin: auto;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100vmax;
 }
