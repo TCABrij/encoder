@@ -44,7 +44,7 @@ body{
     color: rgba(0, 0, 0, 0.214)
 }
 
-button {
+button, input[type='submit'] {
     padding: 8px 10px;
     cursor: pointer;
     background: #FF5D5D;
@@ -54,7 +54,7 @@ button {
     font-weight: 500;
 }
 
-button:hover {
+button:hover, input[type='submit']:hover {
     border-color: transparent;
     background: #f63a3a;
     color: white

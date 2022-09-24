@@ -12,22 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <script src="decoder.js" defer></script>
 </head>
 <body>
     <header>
         <h1 class="title">Mnemonics Decoder</h1>
     </header>
     <main class="container centered">
-        <div class="input-fields">
-            <input type="text" name="input" id="input" placeholder="Enter encoded code" autofocus>
-            <button>Decode</button>
+        <form class="input-fields" onsubmit="return false">
+            <input type="text" title="Allowed: 0 to 9  and ' , '" value="0" pattern="[ 0-9,]*$" required name="input" id="input" placeholder="Enter encoded code">
+            <input type="submit" value="Decode">
             <div class="output-div">
                 <div class="internal-buttons">
                     <button class="copy-btn">Copy to Clipboard</button>
                     <button class="clear-btn">Clear</button>
                 </div>
             </div>
-        </div>
+        </form>
         <div class="progress">Work in Progress :)</div>
     </main>
 </body>
