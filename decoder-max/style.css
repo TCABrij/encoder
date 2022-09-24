@@ -39,6 +39,7 @@ body{
      inset -2px -2px 5px rgba(0,0,0,0.8);
     position: relative;
     overflow: hidden;
+    
 }
 .progress::before{
     content: '';
@@ -58,4 +59,16 @@ body{
     to{
         transform: translateX(70%);
     }
+}
+#input:invalid{
+    box-shadow: none;
+    animation: invalid .2s linear;
+
+}::placeholder{
+    color: white;
+}
+@keyframes invalid{
+    25%{ transform: translateX(4px)}
+    75%{ transform: translateX(-4px)}
+    100%{ transform: translateX(0px);}
 }

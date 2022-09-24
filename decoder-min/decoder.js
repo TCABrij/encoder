@@ -6,42 +6,27 @@ form.addEventListener('submit', decode)
 
 function decode(){
   
-  // input field sholdn't be empty
-  if(empty(inputField)){
-    alert("Atleast one input required! 😐")
-    return
+  let multiInput = multipleInput(inputField.value)
+
+  // Decoder for Multiple inputs 
+  if(multiInput){
+    
+  } // for Single input
+  else{
+    let input = Number.parseInt(inputField.value)
+    // Apply only for 0 to 9 numbers
+    if(input < 0 || input > 9){
+        alertUser('You have entered wrong input, Kindly enter between 0 to 9.');
+        return
+    }
+    
   }
   
-  // Validate only numbers allowed
-  // if(!alphaNumericInput(inputField.value)){
-  //   alert("Enter Encoded code only 🥺")
-  //   return
-  // }
-
-  console.log(alphaNumericInput(inputField.value))
-
-  
 }
 
-
-
-function empty(input){
-  return input.value === '' ? true : false
-}
-
-function alphaNumericInput(input){
-  let small = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z']
-  let capital = small.map((letter) => letter.toUpperCase())
-  
-  small.forEach( letter => {
-    for(let i=0; i<input.length; i++){
-      if(letter == input[i])
-        break;
-    }
-
-    return true
-  })
-  
+// If string contains comma then contains multiple inputs
+function multipleInput(input){
+  return input.includes(',')
 }
 
 function showOutput() {
@@ -53,3 +38,11 @@ function showOutput() {
     });
     mnemonicsCode = [];
   }
+
+const words = {
+  0: 'A',
+  1: 'B',
+  2: 'C',
+  3: 'D',
+  4: 'E'
+}  
