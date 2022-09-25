@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,32 +15,29 @@
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <script src="decoder.js" defer></script>
     <script src="ui-components.js" defer></script>
+    <script src="userfull-funcs.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1 class="title">Mnemonics Decoder</h1>
     </header>
     <main class="container centered">
-        <form class="input-fields" onsubmit="return false">
-            <input type="text" title="Allowed: 0 to 9  and ' , '" value="0" pattern="[ 0-9,]*$" required name="input" id="input" placeholder="Enter encoded code">
-            <input type="submit" value="Decode">
+        <div class="input-fields" onsubmit="return false">
+            <form class="input-wrapper">
+                <input type="text" title="User numbers only." value="0" pattern="[ 0-9]*$" required name="input"
+                    id="input" placeholder="Enter encoded code">
+                <input type="submit" value="Decode">
+            </form>
             <div class="output-div">
                 <div class="internal-buttons">
-                    <button class="copy-btn">Copy to Clipboard</button>
-                    <button class="clear-btn">Clear</button>
+                    <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+                    <button class="clear-btn" onclick="clearOutput()">Clear</button>
                 </div>
             </div>
-        </form>
+        </div>
         <div class="progress">Work in Progress :)</div>
-        <section class="alert-window">
-            <div class="alert-menu">Oops!!</div>
-            <div class="alert-box">
-                <p class="alert-text">Kindly enter valid inputs only.</p>
-                <div class="confirmation-box">
-                    <button class="confirm-btn">Okay</button>
-                </div>
-            </div>
-        </section>
     </main>
 </body>
+
 </html>

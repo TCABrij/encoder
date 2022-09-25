@@ -89,14 +89,8 @@ body{
     background-color: rgba(0, 128, 0, 0.769);
 }
 .visible-alert-window{
-    scale: 1;
     opacity: 1;
-}
-@keyframes fadeIn{
-    to{
-        transform: translate(-50%,-50%) scale(1);
-        opacity: 1;
-    }
+    scale: 1;
 }
 
 .fade-out-alert{
@@ -107,6 +101,21 @@ body{
         scale: 0.8;
         opacity: 0;
     }
+}
+
+.output-div{
+    display: block;
+
+}
+.internal-buttons{
+    visibility: visible;
+    display: none;
+}
+.visible{
+    display: block;
+}
+.word-style{
+    user-select: none;
 }
 
 
