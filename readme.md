@@ -2,6 +2,7 @@
 
 > This web application is developed to help students to encode Mnemonics easily by just typing words.  
 
+The Project is Live here: [Mnemonics encoder & Decoder](https://tcabrij.github.io/encoder)
 
 ## How to use this app?
 
